@@ -1,0 +1,36 @@
+# Poker AI Configuration
+
+# Screen capture settings
+capture:
+  interval: 0.5  # Seconds between captures
+  detect_changes: true  # Optimize by detecting changes
+
+# Strategy settings
+strategy:
+  profile: "balanced"  # balanced, tight, loose, aggressive
+  risk_tolerance: 1.0  # 0.5 (conservative) to 2.0 (aggressive)
+  use_position: true  # Consider table position in decisions
+  bluff_factor: 0.1  # 0.0 (never) to 0.5 (frequently)
+
+# LLM integration
+llm:
+  api_base: "http://localhost:11434/api"  # Ollama API endpoint
+  model_name: "lava"  # Model name in Ollama
+  temperature: 0.7  # Lower for more consistent outputs
+  max_tokens: 1024  # Maximum tokens to generate
+
+# UI interaction
+ui:
+  human_like: true  # Use human-like mouse movements
+  action_delay: 0.5  # Seconds between UI actions
+
+# Execution settings
+execution:
+  loop_delay: 1.0  # Seconds between main loop iterations
+  max_hands: 0  # Maximum hands to play (0 = unlimited)
+  autonomous_mode: false  # True for fully autonomous, False for assisted
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_to_file: true  # Save logs to file
